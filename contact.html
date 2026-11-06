@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Dinesh Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080808;color:#fff;font-family:Arial,sans-serif;line-height:1.7}
+.navbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 8%;background:#111;border-bottom:1px solid #292929;position:sticky;top:0;z-index:10}
+.logo{font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none}
+.logo span{color:#38bdf8}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:#aaa;text-decoration:none;font-size:14px}
+.nav-links a:hover,.nav-links a.active{color:#38bdf8}
+main{min-height:78vh;padding:75px 8%}
+.label{color:#38bdf8;letter-spacing:4px;font-size:12px;margin-bottom:10px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.15;margin-bottom:22px}
+h1 span{color:#38bdf8}
+h2{font-size:34px;margin-bottom:24px}
+h3{font-size:19px;margin-bottom:10px}
+p{color:#aaa;margin-bottom:16px}
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 80% 50%,#172c3d 0%,#080808 50%)}
+.hero .intro{max-width:650px}
+.button{display:inline-block;padding:12px 23px;border:1px solid #38bdf8;color:#fff;text-decoration:none;margin:10px 10px 0 0}
+.button.primary{background:#38bdf8;color:#080808}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#111;border:1px solid #292929;padding:25px}
+.number{color:#38bdf8;font-size:13px;margin-bottom:10px}
+.accent{color:#38bdf8}
+footer{text-align:center;padding:25px;border-top:1px solid #222;color:#777;font-size:13px}
+footer p{margin:4px}
+@media(max-width:768px){.navbar{flex-direction:column;padding:18px 15px}.nav-links{justify-content:center;gap:13px}main{padding:50px 20px}h2{font-size:28px}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="logo" href="index.html">DINESH<span>.</span></a>
+<div class="nav-links">
+<a href="index.html" class="">Home</a>
+<a href="about.html" class="">About</a>
+<a href="skills.html" class="">Skills</a>
+<a href="education.html" class="">Education</a>
+<a href="goals.html" class="">Goals</a>
+<a href="contact.html" class="active">Contact</a>
+</div>
+</nav>
+
+<main>
+<p class="label">LET'S CONNECT</p><h1>Contact <span>Me.</span></h1>
+<div class="card">
+<p>I'm Dinesh, a B.Tech CSE student interested in Data Analytics.</p>
+<p><strong>Phone:</strong> <a class="accent" href="tel:7671098885">7671098885</a></p>
+<p><strong>Email:</strong> <a class="accent" href="mailto:kodavatikantidinesh18@gmail.com">kodavatikantidinesh18@gmail.com</a></p>
+<p><strong>GitHub:</strong> <a class="accent" href="https://github.com/kodavatikantidinesh18-droid" target="_blank" rel="noopener noreferrer">Visit My GitHub</a></p>
+</div>
+</main>
+
+<footer>
+<p>© 2026 Dinesh. All rights reserved.</p>
+<p>Student | Learner | Future Professional</p>
+</footer>
+</body>
+</html>
