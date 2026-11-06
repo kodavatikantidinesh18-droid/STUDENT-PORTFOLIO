@@ -1,438 +1,700 @@
-student-portfolio/
-└── index.html<!DOCTYPE html><html lang="en">
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Student Portfolio</title>.skill-card {
-background: #111;
-border: 1px solid #292929;
-padding: 25px;
-transition: 0.3s ease;
-}
 
-.skill-card:hover {
-background: #1b1b1b;
-border-color: #777;
-transform: translateY(-5px);
-}
+    <title>Dinesh | Data Analytics Portfolio</title>
 
-.skill-card h3 {
-font-size: 18px;
-margin-bottom: 15px;
-color: #fff;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.skill-card p {
-color: #999;
-font-size: 14px;
-line-height: 1.7;
-}<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-        background: #080808;
-        color: white;
-        font-family: Arial, sans-serif;
-    }
+        body {
+            background: #080808;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
 
-    header {
-        padding: 25px 8%;
-        border-bottom: 1px solid #222;
-    }
+        /* NAVIGATION */
 
-    header h2 {
-        letter-spacing: 3px;
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111111;
+            border-bottom: 1px solid #292929;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .hero {
-        min-height: 85vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px 8%;
-        background: radial-gradient(
-            circle at 80% 50%,
-            #252525 0%,
-            #080808 50%
-        );
-    }
+        .logo {
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
 
-    .hero p {
-        color: #999;
-        letter-spacing: 4px;
-        margin-bottom: 20px;
-    }
+        .logo span {
+            color: #38bdf8;
+        }
 
-    .hero h1 {
-        font-size: clamp(42px, 8vw, 85px);
-        margin-bottom: 20px;
-    }
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
 
-    .hero h1 span {
-        color: #999;
-    }
+        .nav-links a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-    .hero h3 {
-        color: #bbb;
-        font-weight: normal;
-        font-size: 20px;
-    }
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
 
-    .hero a {
-        display: inline-block;
-        width: fit-content;
-        margin-top: 35px;
-        padding: 14px 25px;
-        border: 1px solid white;
-        color: white;
-        text-decoration: none;
-        transition: 0.3s;
-    }
+        /* HERO */
 
-    .hero a:hover {
-        background: white;
-        color: black;
-    }
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 8%;
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    #172c3d 0%,
+                    #080808 50%
+                );
+        }
 
-    section {
-        padding: 60px 8%;
-    }
+        .hero-label {
+            color: #38bdf8;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
 
-    section h2 {
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 85px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
 
-    section p {
-        color: #aaa;
-        line-height: 1.8;
-    }
+        .hero h1 span {
+            color: #38bdf8;
+        }
 
-    footer {
-        text-align: center;
-        padding: 25px;
-        border-top: 1px solid #222;
-        color: #777;
-    }.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #111;
-    border-bottom: 1px solid #292929;
-    flex-wrap: wrap;
-    gap: 15px;
-}
+        .hero h3 {
+            color: #bbbbbb;
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
 
-.logo {
-    color: #fff;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
+        .hero-description {
+            color: #999999;
+            max-width: 650px;
+        }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
 
-.nav-links a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            border: 1px solid #38bdf8;
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 14px;
+        }
 
-.nav-links a:hover {
-    color: #fff;
-}/* Mobile Friendly Design */
+        .button-primary {
+            background: #38bdf8;
+            color: #080808;
+        }
 
-@media (max-width: 768px) {
+        .button:hover {
+            background: #ffffff;
+            color: #080808;
+            border-color: #ffffff;
+        }
 
-    body {
-        font-size: 14px;
-    }
+        /* GENERAL SECTIONS */
 
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+        section {
+            padding: 75px 8%;
+            scroll-margin-top: 80px;
+        }
 
-    .nav-links {
-        justify-content: center;
-        gap: 15px;
-    }
+        .section-label {
+            color: #38bdf8;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
 
-    section {
-        padding: 30px 20px;
-    }
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
 
-    h1 {
-        font-size: 32px;
-    }
+        section p {
+            color: #aaaaaa;
+        }
 
-    h2 {
-        font-size: 24px;
-    }
+        /* ABOUT */
 
-    p {
-        line-height: 1.8;
-    }
+        .about-text {
+            max-width: 850px;
+        }
 
-}.resume-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 25px;
-    border: 1px solid #777;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 13px;
-    transition: 0.3s;
-}
+        .about-text p {
+            margin-bottom: 20px;
+        }
 
-.resume-button:hover {
-    background: #fff;
-    color: #111;
-}
-</style>
+        .mindset {
+            border-left: 3px solid #38bdf8;
+            padding: 20px;
+            margin-top: 30px;
+            background: #111111;
+        }
 
-</head><body><header>
-    <h2>MY PORTFOLIO.</h2>
-</header>
+        .mindset h3 {
+            margin-bottom: 8px;
+        }
 
-<div class="hero">
-    <p>STUDENT PORTFOLIO</p>
-<a href="./resume.pdf" target="_blank" class="resume-btn">
-    DOWNLOAD RESUME ↓
-</a>
+        /* SKILLS */
 
-    <h3>Student | Learner | Future Professional</h3>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 20px;
+        }
 
-    <a href="#about">DISCOVER MORE ↘️</a>
-</div>
+        .skill-card {
+            background: #111111;
+            border: 1px solid #292929;
+            padding: 25px;
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            background: #171717;
+            border-color: #38bdf8;
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .skill-card p {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .skill-number {
+            color: #38bdf8;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            background: #111111;
+            border: 1px solid #292929;
+            padding: 30px;
+            max-width: 850px;
+        }
+
+        .education-year {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .education-card h4 {
+            color: #bbbbbb;
+            margin-bottom: 15px;
+        }
+
+        /* GOALS */
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        /* CONTACT */
+
+        .contact-card {
+            background: #111111;
+            border: 1px solid #292929;
+            padding: 30px;
+            max-width: 850px;
+        }
+
+        .contact-card p {
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: #38bdf8;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #222222;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 75vh;
+                padding: 60px 20px;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h3 {
+                font-size: 18px;
+            }
+
+            .education-card,
+            .contact-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <h2 class="logo">DINESH<span>.</span></h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+
+        <p class="hero-label">
+            STUDENT PORTFOLIO
+        </p>
+
+        <h1>
+            Hi, I'm <span>Dinesh.</span>
+        </h1>
+
+        <h3>
+            B.Tech CSE Student | Aspiring Data Analyst
+        </h3>
+
+        <p class="hero-description">
+            Passionate about learning data analytics,
+            exploring technology, solving problems,
+            and building a successful professional future.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="./resume.pdf"
+               target="_blank"
+               class="button button-primary">
+                VIEW MY RESUME
+            </a>
+
+            <a href="#about" class="button">
+                DISCOVER MORE
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
 
     <section id="about">
-    <p style="color: #888; letter-spacing: 4px;">
-        GET TO KNOW ME
-    </p><h2 style="margin-top: 15px;">About Me.</h2>
 
-<p>
-    Hello! I'm Dinesh, a passionate student who believes
-    in learning, discipline, and continuous improvement.
-    I enjoy exploring new technologies, developing my
-    skills, and turning my ideas into reality.
-</p>
-
-<br>
-
-<p>
-    My goal is to improve myself every day, gain valuable
-    knowledge, and build a successful future through
-    dedication and hard work.
-</p>
-
-<br>
-
-<div style="border-left: 2px solid #777; padding-left: 20px;">
-    <h3 style="margin-bottom: 10px;">My Mindset</h3>
-
-    <p>
-        Stay Focused. Keep Learning. Never Stop Growing.
-    </p>
-</div>
-
-</section>
-</section>
-<section id="skills">
-    <p style="color: #888; letter-spacing: 4px;">
-        WHAT I BRING
-    </p><h2 style="margin-top: 15px; margin-bottom: 30px;">
-    My Skills.
-</h2>
-
-<div style="display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;">
-
-    <div class="skill-card">
-        <h3>01. Communication</h3>
-        <p>Expressing ideas clearly and working well with others.</p>
-    </div>
-
-    <div class="skill-card">
-        <h3>02. Problem-Solving</h3>
-        <p>Finding solutions through logical thinking and creativity.</p>
-    </div>
-
-    <div class="skill-card">
-        <h3>03. Time Management</h3>
-        <p>Organizing tasks and making productive use of time.</p>
-    </div>
-
-    <div class="skill-card">
-        <h3>04. Muscle Memory</h3>
-        <p>Building consistency through practice and repetition.</p>
-    </div>
-
-</div>
-
-</section>
-
-</section><section id="skills">
-
-    <p style="color: #888; letter-spacing: 4px;">
-        WHAT I AM LEARNING
-    </p>
-
-    <h2 style="margin-top: 15px; margin-bottom: 30px;">
-        My Skills.
-    </h2>
-
-    <div class="skill-card">
-
-        <h3>01. Excel</h3>
-
-        <p>
-            Practicing data organization, analysis, and reporting.
+        <p class="section-label">
+            GET TO KNOW ME
         </p>
 
-    </div>
+        <h2>About Me.</h2>
 
-    <div class="skill-card">
+        <div class="about-text">
 
-        <h3>02. SQL</h3>
+            <p>
+                Hello! I'm Dinesh, a passionate student who
+                believes in learning, discipline, and continuous
+                improvement.
+            </p>
 
-        <p>
-            Learning to query and analyze structured data.
+            <p>
+                I enjoy exploring new technologies,
+                developing my skills, and turning my ideas
+                into reality.
+            </p>
+
+            <p>
+                I am interested in Data Analytics and
+                learning how to transform information
+                into meaningful insights.
+            </p>
+
+            <p>
+                My goal is to improve myself every day,
+                gain valuable knowledge, and build a
+                successful future through dedication
+                and hard work.
+            </p>
+
+        </div>
+
+        <div class="mindset">
+
+            <h3>My Mindset</h3>
+
+            <p>
+                Stay Focused. Keep Learning.
+                Never Stop Growing.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <p class="section-label">
+            WHAT I AM LEARNING
         </p>
 
-    </div>
+        <h2>My Skills.</h2>
 
-    <div class="skill-card">
+        <div class="skills-grid">
 
-        <h3>03. Python</h3>
+            <div class="skill-card">
 
-        <p>
-            Exploring Python for data analysis and manipulation.
+                <p class="skill-number">01</p>
+
+                <h3>Excel</h3>
+
+                <p>
+                    Practicing data organization,
+                    analysis, and reporting.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <p class="skill-number">02</p>
+
+                <h3>SQL</h3>
+
+                <p>
+                    Learning to query and analyze
+                    structured data.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <p class="skill-number">03</p>
+
+                <h3>Python</h3>
+
+                <p>
+                    Exploring Python for data analysis
+                    and manipulation.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <p class="skill-number">04</p>
+
+                <h3>Power BI</h3>
+
+                <p>
+                    Learning data visualization and
+                    interactive dashboards.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <p class="skill-number">05</p>
+
+                <h3>Communication</h3>
+
+                <p>
+                    Expressing ideas clearly and
+                    working well with others.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <p class="skill-number">06</p>
+
+                <h3>Problem-Solving</h3>
+
+                <p>
+                    Finding solutions through logical
+                    thinking and creativity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <p class="section-label">
+            MY ACADEMIC JOURNEY
         </p>
 
-    </div>
+        <h2>Education.</h2>
 
-    <div class="skill-card">
+        <div class="education-card">
 
-        <h3>04. Power BI</h3>
+            <p class="education-year">
+                2023 — 2027
+            </p>
 
-        <p>
-            Learning data visualization and interactive dashboards.
+            <h3>
+                B.Tech — Computer Science and Engineering
+            </h3>
+
+            <h4>
+                KMM Institute of Technology and Engineering
+            </h4>
+
+            <p>
+                Ramireddypalli, Tirupati District
+            </p>
+
+            <br>
+
+            <p>
+                Currently pursuing my Bachelor of Technology
+                in Computer Science and Engineering,
+                developing my technical knowledge
+                and problem-solving skills.
+            </p>
+
+            <br>
+
+            <p class="education-year">
+                CURRENTLY PURSUING
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CAREER GOALS -->
+
+    <section id="goals">
+
+        <p class="section-label">
+            MY FUTURE
         </p>
 
-    </div>
+        <h2>Career Goals.</h2>
 
-</section>
-<footer><footer><section id="education">
-    <p style="color: #888; letter-spacing: 4px;">
-        MY ACADEMIC JOURNEY
-    </p><h2 style="margin-top: 15px; margin-bottom: 30px;">
-    Education.
-</h2>
+        <div class="goals-grid">
 
-<div class="education-card">
-    <p class="education-year">2023 — 2027</p>
+            <div class="skill-card">
 
-    <h3>B.Tech — Computer Science and Engineering (CSE)</h3>
+                <h3>01. Become a Data Analyst</h3>
 
-    <h4 style="color: #bbb; margin-bottom: 12px;">
-        KMM Institute of Technology and Engineering
-    </h4>
+                <p>
+                    Develop strong analytical skills
+                    and learn how to transform raw
+                    data into meaningful insights.
+                </p>
 
-    <p>Ramireddypalli, Tirupati District</p>
+            </div>
 
-    <p style="margin-top: 15px;">
-        Currently pursuing my Bachelor of Technology in
-        Computer Science and Engineering, developing my
-        technical knowledge and problem-solving skills.
-    </p>
+            <div class="skill-card">
 
-    <p style="margin-top: 20px; color: #888;">
-        STATUS: CURRENTLY PURSUING
-    </p>
-</div>
+                <h3>02. Real-World Data</h3>
 
-</section>
-    
-</footer><section id="goals"><p style="color: #888; letter-spacing: 4px;">
-    MY FUTURE
-</p>
+                <p>
+                    Gain practical experience by
+                    exploring datasets, identifying
+                    patterns, and solving problems.
+                </p>
 
-<h2 style="margin-top: 15px; margin-bottom: 30px;">
-    Career Goals.
-</h2>
+            </div>
 
-<div class="skill-card">
-    <h3>01. Become a Data Analyst</h3>
+            <div class="skill-card">
 
-    <p>
-        My goal is to develop strong analytical skills
-        and learn how to transform raw data into
-        meaningful insights.
-    </p>
-</div>
+                <h3>03. Continuous Learning</h3>
 
-<div class="skill-card">
-    <h3>02. Work with Real-World Data</h3>
+                <p>
+                    Improve technical knowledge,
+                    strengthen problem-solving
+                    abilities, and grow professionally.
+                </p>
 
-    <p>
-        I want to gain practical experience by exploring
-        datasets, identifying patterns, and solving
-        analytical problems.
-    </p>
-</div>
+            </div>
 
-<div class="skill-card">
-    <h3>03. Continuous Learning</h3>
+        </div>
 
-    <p>
-        I aim to improve my technical knowledge,
-        strengthen my problem-solving abilities,
-        and grow professionally.
-    </p>
-</div>
+    </section>
 
-</section>
-    © 2026 My Portfolio. All rights reserved.
-</footer><section id="contact">
-    <h2>Contact Me</h2>
+    <!-- CONTACT -->
 
-    <p>I'm Dinesh, a final-year B.Tech CSE student interested in Data Analytics.</p>
+    <section id="contact">
 
-    <p>
-        <strong>Phone:</strong>
-        <a href="tel:7671098885">7671098885</a>
-    </p>
+        <p class="section-label">
+            LET'S CONNECT
+        </p>
 
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:kodavatikantidinesh18@gmail.com">
-            kodavatikantidinesh18@gmail.com
-        </a>
-    </p>
-</section>
+        <h2>Contact Me.</h2>
 
-</body><nav class="navbar">
-    <h2 class="logo">DINESH.</h2>
+        <div class="contact-card">
 
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#goals">Goals</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+            <p>
+                I'm Dinesh, a B.Tech CSE student
+                interested in Data Analytics.
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:7671098885">
+                    7671098885
+                </a>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:kodavatikantidinesh18@gmail.com">
+                    kodavatikantidinesh18@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/kodavatikantidinesh18-droid"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My GitHub
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Dinesh. All rights reserved.
+        </p>
+
+        <p>
+            Student | Learner | Future Professional
+        </p>
+
+    </footer>
+
+</body>
 </html>
+```
